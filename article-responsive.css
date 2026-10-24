@@ -1,0 +1,105 @@
+/* article-responsive.css — Assignment 9.2 */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f9;
+    color: #2d3748;
+    /* 6. Improved line length and spacing for readability */
+    line-height: 1.7;
+    padding: 20px;
+}
+
+/* ==========================================================================
+   5. Content Container Max-Width & Responsive Padding
+   ========================================================================== */
+.article-container {
+    max-width: 740px;                        /* 5. Ideal reading width limit */
+    margin: 0 auto;                          /* Center container horizontally */
+    background-color: #ffffff;
+    /* 3 & 6. Responsive padding using clamp() */
+    padding: clamp(20px, 5vw, 50px);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
+}
+
+/* ==========================================================================
+   3. Fluid Typography using rem and clamp()
+   ========================================================================== */
+.category-tag {
+    display: inline-block;
+    background-color: #ebf8ff;
+    color: #2b6cb0;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.article-header h1 {
+    /* 3. clamp(MIN, VAL, MAX) ensures smooth fluid scaling */
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    color: #1a365d;
+    line-height: 1.25;
+    margin-bottom: 10px;
+}
+
+.article-meta {
+    font-size: 0.9rem;
+    color: #a0aec0;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.article-content h2 {
+    font-size: clamp(1.3rem, 2.5vw, 1.6rem);
+    color: #1a365d;
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
+.article-content p {
+    font-size: 1.05rem;                      /* Base paragraph scale */
+    color: #4a5568;
+    margin-bottom: 20px;                     /* Paragraph spacing */
+}
+
+/* ==========================================================================
+   4. Responsive Images (`max-width: 100%`, `height: auto`)
+   ========================================================================== */
+.article-figure {
+    margin: 30px 0;
+}
+
+.responsive-img {
+    width: 100%;                             /* 4. Fill container width */
+    height: auto;                            /* 4. Maintain correct aspect ratio */
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+figcaption {
+    font-size: 0.85rem;
+    color: #718096;
+    text-align: center;
+    margin-top: 8px;
+}
+
+/* Footer */
+.article-footer {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #e2e8f0;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #a0aec0;
+}

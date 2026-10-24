@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Typography & Images — Article</title>
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="article-responsive.css">
+</head>
+<body>
+
+    <!-- 5. Content Container with Controlled Max-Width -->
+    <main class="article-container">
+        
+        <!-- Article Header -->
+        <header class="article-header">
+            <span class="category-tag">Web Design Standards</span>
+            <!-- 2 & 3. Fluid Heading using clamp() -->
+            <h1>The Evolution of Responsive Typography &amp; Fluid Layouts</h1>
+            <p class="article-meta">Published on October 24, 2026 &bull; By Alex Turner</p>
+        </header>
+
+        <!-- 2. Article Body Content -->
+        <article class="article-content">
+            <p>
+                In modern web development, creating a seamless reading experience across devices requires more than just fluid column containers. Typography and imagery must scale proportionally to maintain readability, aesthetic balance, and proper line lengths regardless of screen dimensions.
+            </p>
+
+            <!-- 2 & 4. Responsive Image 1 -->
+            <figure class="article-figure">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1000&q=80" alt="Workspace setup with laptop displaying code" class="responsive-img">
+                <figcaption>Figure 1: Clean, modern workspace optimized for responsive web design workflows.</figcaption>
+            </figure>
+
+            <h2>Why Line Length Matters</h2>
+            <p>
+                When text lines become too long on wide desktop monitors, readers' eyes struggle to track from the end of one line to the beginning of the next. Conversely, lines that are too short on mobile screens break reading momentum. Establishing an ideal measure—typically between 65 and 75 characters per line—is crucial for accessibility and user retention.
+            </p>
+            <p>
+                By combining CSS <code>clamp()</code> functions with relative units like <code>rem</code>, developers can craft fluid typographic scales that eliminate jarring size jumps at rigid media query breakpoints.
+            </p>
+
+            <!-- 2 & 4. Responsive Image 2 -->
+            <figure class="article-figure">
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1000&q=80" alt="Code editor screen showing modern CSS properties" class="responsive-img">
+                <figcaption>Figure 2: Modern CSS properties empowering scalable layouts.</figcaption>
+            </figure>
+
+            <h2>Implementing Fluid Images</h2>
+            <p>
+                Images that exceed their parent container's width will break mobile layouts and trigger unwanted horizontal scrolling. Enforcing universal rules such as <code>max-width: 100%</code> and <code>height: auto</code> ensures that raster images scale down gracefully while preserving their original aspect ratios.
+            </p>
+        </article>
+
+        <!-- Footer -->
+        <footer class="article-footer">
+            <p>&copy; 2026 Responsive Typography Assignment. All rights reserved.</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
